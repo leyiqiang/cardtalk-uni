@@ -9,7 +9,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.9.2",
 	"appid": "wx3af143941d63bfc0",
-	"projectname": "%E6%98%93%E7%9F%A5cardtalk",
+	"projectname": "易知cardtalk",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

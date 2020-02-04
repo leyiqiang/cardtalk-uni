@@ -39,6 +39,7 @@
 	import uniGrid from "@/components/uni-grid/uni-grid.vue";
 	import uniGridItem from "@/components/uni-grid-item/uni-grid-item.vue";
 	import { createNamespacedHelpers } from 'vuex';
+	import Voice from '../../js_sdk/QuShe-baiduYY/QS-baiduyy/QS-baiduyy.js'
 	const { mapState, mapGetters, mapMutations } = createNamespacedHelpers('cards')
 	export default {
 		data() {
@@ -72,10 +73,13 @@
 			textToSpeech() {
 		        const textList = this.selectedCards.map((c) => c.name )
 		        const text = textList.join('')
-		        const url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=3&text=" + encodeURI(text)
-				const audio = uni.createInnerAudioContext();
-		        audio.src = url;
-		        audio.play()
+				Voice(text);
+		        // const url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=3&text=" + encodeURI(text)
+				// let audio = uni.createInnerAudioContext();
+				// audio.obeyMuteSwitch = false;
+		        // audio.src = url;
+				// uni.textToSpeech()
+		        // audio.play()
 			},
 			tabChange(index) {
 				this.TabCur = index;
