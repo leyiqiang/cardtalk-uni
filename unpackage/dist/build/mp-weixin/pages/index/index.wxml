@@ -1,0 +1,1 @@
+<view class="content"><wuc-tab vue-id="1" tab-list="{{getCategoryNames}}" tabCur="{{TabCur}}" data-event-opts="{{[['^updateTabCur',[['__set_sync',['$0','TabCur','$event'],['']]]],['^updateTabCur',[['__set_sync',['$0','TabCur','$event'],['']]]],['^change',[['tabChange']]]]}}" bind:updateTabCur="__e" bind:change="__e" bind:__l="__l"></wuc-tab></view>
