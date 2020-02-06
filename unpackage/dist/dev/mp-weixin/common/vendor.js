@@ -9840,7 +9840,7 @@ function getBDVoicToken() {
       url: 'https://openapi.baidu.com/oauth/2.0/token',
       method: 'POST', //建议使用post访问
       // data: 'grant_type=client_credentials&client_id=nm6Os9qqOacgxXjKv8PIp45H&client_secret=BXHhGIpNU7Wi3GDYUt0AGY5cWbWklrov',
-      data: 'grant_type=client_credentials&client_id=jtwoB9xzRnv3qltcfqL0pk1t&client_secret=A16UKHBKVeAh68kuGGSPqnemCVyPDmgb',
+      data: 'grant_type=client_credentials&client_id=eMGTnUcUfuSImPv04e4AjLjw&client_secret=CGctdCngK2EQwpmL8UlTrB81l4B1965A',
       header: {
         "content-type": "application/x-www-form-urlencoded" },
 
@@ -9876,7 +9876,7 @@ function openVoice(objs) {// 传入需转为语音的文本内容
       });
     });
   }
-
+  audioStartSwitch = false;
   if (!audioStartSwitch || lineUp) {
     audioStartSwitch = true;
     openVoiceFc(objs);
@@ -9971,7 +9971,10 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
   }
   audio.onPlay(function () {
     console.log('音频播放开始');
-    if (audioCallback && audioCallback.onPlay && typeof audioCallback.onPlay == 'function') audioCallback.onPlay();
+    if (audioCallback && audioCallback.onPlay && typeof audioCallback.onPlay == 'function') {
+      console.log('1');
+      audioCallback.onPlay();
+    }
   });
   audio.onPause(function () {
     if (audioCallback && audioCallback.onPause && typeof audioCallback.onPause == 'function') audioCallback.onPause();
@@ -9983,7 +9986,9 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
     if (audioCallback && audioCallback.onStop && typeof audioCallback.onStop == 'function') audioCallback.onStop();
   });
   audio.onTimeUpdate(function () {
-    if (audioCallback && audioCallback.onTimeUpdate && typeof audioCallback.onTimeUpdate == 'function') audioCallback.onTimeUpdate();
+    if (audioCallback && audioCallback.onTimeUpdate && typeof audioCallback.onTimeUpdate == 'function') {
+      audioCallback.onTimeUpdate();
+    }
   });
   audio.onSeeking(function () {
     if (audioCallback && audioCallback.onSeeking && typeof audioCallback.onSeeking == 'function') audioCallback.onSeeking();
@@ -9996,7 +10001,9 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
     console.log('销毁音频实例');
     audio.destroy(); //销毁音频实例
     audio = null;
-    if (audioCallback && audioCallback.onEnded && typeof audioCallback.onEnded == 'function') audioCallback.onEnded();
+    if (audioCallback && audioCallback.onEnded && typeof audioCallback.onEnded == 'function') {
+      audioCallback.onEnded();
+    }
     if (lineUp !== false) {
       if (audioTeam.length > 0) {
         console.log('队列中');

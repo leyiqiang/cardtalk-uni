@@ -73,7 +73,7 @@
 			textToSpeech() {
 		        const textList = this.selectedCards.map((c) => c.name )
 		        const text = textList.join('')
-				Voice(text);
+				Voice(text)
 		        // const url = "http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=3&text=" + encodeURI(text)
 				// let audio = uni.createInnerAudioContext();
 				// audio.obeyMuteSwitch = false;
