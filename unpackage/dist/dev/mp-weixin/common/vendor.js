@@ -8508,7 +8508,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": {}, "pages/user/user": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "Cardtalk", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": {}, "pages/user/user": { "navigationBarTextStyle": "white", "navigationBarTitleText": "我的", "navigationBarBackgroundColor": "#ffd655" }, "pages/registLogin/registLogin": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "Cardtalk", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -8657,14 +8657,16 @@ function normalizeComponent (
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 16));
-var _cards = _interopRequireDefault(__webpack_require__(/*! ./modules/cards.js */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _cards = _interopRequireDefault(__webpack_require__(/*! ./modules/cards.js */ 17));
+var _user = _interopRequireDefault(__webpack_require__(/*! ./modules/user.js */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 _vue.default.use(_vuex.default);
 var store = new _vuex.default.Store({
   state: {},
   mutations: {},
   actions: {},
   modules: {
-    cards: _cards.default } });var _default =
+    cards: _cards.default,
+    user: _user.default } });var _default =
 
 
 store;exports.default = _default;
@@ -9807,13 +9809,49 @@ var actions = {};var _default =
   actions: actions };exports.default = _default;
 
 /***/ }),
-/* 18 */,
+/* 18 */
+/*!****************************************************************!*\
+  !*** /Users/leyiqiang/work/cardtalk-uni/store/modules/user.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var state = {
+  userIsLogin: false,
+  userInfo: {} };
+
+
+
+var getters = {};
+
+
+var mutations = {
+  updateUserInfo: function updateUserInfo(state, userInfo) {
+    state.userInfo = userInfo;
+    state.userIsLogin = true;
+  } };
+
+
+var actions = {};var _default =
+
+
+
+{
+  namespaced: true,
+  state: state,
+  getters: getters,
+  mutations: mutations,
+  actions: actions };exports.default = _default;
+
+/***/ }),
 /* 19 */,
 /* 20 */,
 /* 21 */,
 /* 22 */,
 /* 23 */,
-/* 24 */
+/* 24 */,
+/* 25 */
 /*!****************************************************************************************!*\
   !*** /Users/leyiqiang/work/cardtalk-uni/js_sdk/QuShe-baiduYY/QS-baiduyy/QS-baiduyy.js ***!
   \****************************************************************************************/
@@ -10025,6 +10063,38 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
   audio.play();
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */
+/*!***********************************************************!*\
+  !*** /Users/leyiqiang/work/cardtalk-uni/constants/api.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var API = '/' + 'api';
+var WX_USER = API + '/' + 'wxUser';
+var WX_LOGIN = WX_USER + '/' + 'login';var _default =
+
+{
+  WX_LOGIN: WX_LOGIN };exports.default = _default;
 
 /***/ })
 ]]);

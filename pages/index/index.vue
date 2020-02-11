@@ -41,6 +41,7 @@
 	import { createNamespacedHelpers } from 'vuex';
 	import Voice from '../../js_sdk/QuShe-baiduYY/QS-baiduyy/QS-baiduyy.js'
 	const { mapState, mapGetters, mapMutations } = createNamespacedHelpers('cards')
+	
 	export default {
 		data() {
 			return {
