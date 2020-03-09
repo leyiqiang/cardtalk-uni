@@ -1,23 +1,22 @@
-
-.index {
+  .index {
 	  /* height: 100%; */
 }
-._ul.cards {
+	ul.cards {
       width: 100%;
       margin-bottom: -10px;
 	  margin-left:8px;
       margin-top: 10px;
       background: none;
-}
-._ul.cards ._li{
+    }
+    ul.cards li{
       list-style: none;
       float: left;
       width: 32%;/*可以用百分比*/
       height: 120px;/*可以用百分比 */
       margin-bottom: 5px;
       /* border: 1px solid red; */
-}
-._ul.cards ._li  > ._div{
+    }
+    ul.cards li  > div{
 	  /* display: block; */
       background: #f9d66b;
 	  box-shadow:-2px 0px 1px #C0C0C0;
@@ -25,34 +24,38 @@
       border-radius: 8px;
       text-align: center;
       /* line-height: 150px; */
-}
-._ul.selected-cards {
+    }
+	ul.selected-cards {
 		display: block;
 		height:150px;
 		border-radius: 8px;
 		padding-top: 5px;
 		/* border: 1px solid green; */
-}
-._div.card-slot {
+	}
+	div.card-slot {
 		/* border: 1px solid red; */
 		border-radius: 8px;
 		height: 115px;
-}
-button.playbutton {
+	}
+	
+	button.playbutton {
 		width:90%;
 		background-color: #4bc73e;
-}
-._ul.categories {
+	}
+
+	
+	ul.categories {
 		overflow-x: auto;
 		list-style: none;
 		white-space:nowrap;
 		width: auto;
-}
-._li.categories-item {
-		margin-left: 20px; /*每个li设置间距为20px  */
+	}
+	li.categories-item {
+		margin-left: 20px; //每个li设置间距为20px 
 		display: inline-block;
-}
-.selected-cards-block {
+	}
+	
+	.selected-cards-block {
 		position: absolute;
 		top:0;
 		display: block;
@@ -61,33 +64,27 @@ button.playbutton {
 		padding: 0;
 		border-radius: 8px;
 		/* border: 1px solid red; */
-}
-.choose-card-block {
+	}
+	.choose-card-block {
 		position: absolute;
 		top:260px;
 		bottom: 0px;
 		overflow-x: hidden;
 		overflow-y: scroll;
-}
-.card-text {
+	}
+	.card-text {
 		/* display: inherit; */
 		padding-bottom: 5px;
-}
-.card-img {
+	}
+	.card-img {
 		/* padding-bottom: 100%; */
 		border-radius: 8px;
 		position: relative;
 		padding-top:5%;
 		height: 80px;
 		width: 80px;
-}
-.selected-tab {
+	}
+	
+	.selected-tab {
 		color:#f37b1d;
-}
-.page {
-	width: 100%;
-	height: 100%;
-	background-color: #f7f7f7;
-	position: absolute;
-}
-
+	}

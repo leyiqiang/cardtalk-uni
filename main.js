@@ -6,7 +6,7 @@ import store from './store'
 Vue.config.productionTip = false
 Vue.prototype.$store = store
 Vue.prototype.serverUrl = 'http://localhost:3000'
-// Vue.prototype.serverUrl = 'localhost:3000'
+// Vue.prototype.serverUrl = 'http://129.204.248.42:3000'
 
 App.mpType = 'app'
 

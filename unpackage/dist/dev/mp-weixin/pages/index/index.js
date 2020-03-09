@@ -95,7 +95,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
+var components = {
+  "wuc-tab": () =>
+    __webpack_require__.e(/*! import() | components/wuc-tab/wuc-tab */ "components/wuc-tab/wuc-tab").then(__webpack_require__.bind(null, /*! @/components/wuc-tab/wuc-tab.vue */ 45))
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -134,6 +137,41 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -221,16 +259,10 @@ var _QSBaiduyy = _interopRequireDefault(__webpack_require__(/*! ../../js_sdk/QuS
       this.TabCur = index;
       this.changeCategoryTo(this.categories[index]);
     },
-    removeCardEvent: function removeCardEvent(e) {var
-
-      index =
-      e.detail.index;
+    removeCardEvent: function removeCardEvent(index) {
       this.removeCard(index);
     },
-    addCardEvent: function addCardEvent(e) {var
-
-      index =
-      e.detail.index;
+    addCardEvent: function addCardEvent(index) {
       var clickedCard = this.showSelectedItems[index];
       this.addCard(clickedCard);
     } },

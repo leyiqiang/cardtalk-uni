@@ -16,7 +16,7 @@ var _store = _interopRequireDefault(__webpack_require__(/*! ./store */ 15));func
 _vue.default.config.productionTip = false;
 _vue.default.prototype.$store = _store.default;
 _vue.default.prototype.serverUrl = 'http://localhost:3000';
-// Vue.prototype.serverUrl = 'localhost:3000'
+// Vue.prototype.serverUrl = 'http://129.204.248.42:3000'
 
 _App.default.mpType = 'app';
 

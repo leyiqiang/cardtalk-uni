@@ -32,7 +32,7 @@ const state = {
     {
       name: '不',
       category: WANT,
-      pictureLink: "",
+      pictureLink: "../../static/cardImages/no.jpg",
     },
     {
       name: '我不想要',
@@ -155,7 +155,7 @@ const mutations = {
     state.selectedCategory = category
   },
   addCard(state, card) {
-    if(state.selectedCards.length < 4) {
+    if(state.selectedCards.length < 3) {
       const { name, category, pictureLink } = card
       state.selectedCards.push({name, category, pictureLink})
     }
