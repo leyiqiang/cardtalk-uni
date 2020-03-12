@@ -76,11 +76,13 @@
 	import { createNamespacedHelpers } from 'vuex';
 	import Voice from '../../js_sdk/QuShe-baiduYY/QS-baiduyy/QS-baiduyy.js'
 	const { mapState, mapGetters, mapMutations } = createNamespacedHelpers('cards')
+	const HISTORY = '最近使用'
 	
 	export default {
 		data() {
 			return {
-				TabCur: 0,
+				TabCur: 1,
+				myWords: "",
 				tabList: [{ name: '精选' }, { name: '订阅' }],
 			}
 		},
@@ -88,7 +90,15 @@
 
 		computed: {
 			showSelectedItems() {
-				return this.getItemsByCategory(this.selectedCategory)
+				if(this.selectedCategory === HISTORY) {
+					let historyCards = uni.getStorageSync(HISTORY);
+					console.log(historyCards)
+					return historyCards;
+				}
+				else {
+					return this.getItemsByCategory(this.selectedCategory)
+					
+				}
 			},
 			getCategoryNames() {
 				return this.categories.map(c =>{
@@ -106,6 +116,10 @@
 				])
 		},
 		methods: {
+			customizeTextToSpeech(card) {
+				const cardWord = card.name;
+				Voice(cardWord)
+			},
 			textToSpeech() {
 		        const textList = this.selectedCards.map((c) => c.name )
 		        const text = textList.join('')
@@ -126,7 +140,25 @@
 			},
 			addCardEvent(index) {
 				const clickedCard = this.showSelectedItems[index];
+				this.customizeTextToSpeech(clickedCard);
 				this.addCard(clickedCard);
+				
+				let historyCards = uni.getStorageSync(HISTORY);
+				if (!historyCards) {
+					historyCards = []
+				}
+				if (historyCards.length >= 20) {
+					historyCards.pop()
+				} 
+				historyCards.unshift(clickedCard)
+				uni.setStorageSync(HISTORY, this.unique(historyCards));
+			},
+			unique(array){
+				let obj = {};
+				return array.reduce((cur, next) => {
+					obj[next.name] ? "" : obj[next.name] = true && cur.push(next);
+					return cur;
+				}, [])
 			},
 			...mapMutations([
 				'changeCategoryTo',

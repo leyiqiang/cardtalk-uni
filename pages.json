@@ -4,48 +4,53 @@
 			"path": "pages/index/index",
 			"style": {}
 		}
-	    ,{
-            "path" : "pages/user/user",
-            "style": {
-            	"app-plus": {
-            		"titleView": false //禁用原生导航栏
-            	},
-            	"navigationBarTextStyle": "white",
-            	"navigationBarTitleText": "我的",
-            	"navigationBarBackgroundColor": "#ffd655"
-            }
-        }
+	    // ,{
+     //        "path" : "pages/about/about",
+     //        "style": {
+     //        	"app-plus": {
+     //        		"titleView": false //禁用原生导航栏
+     //        	},
+     //        	"navigationBarTextStyle": "white",
+     //        	"navigationBarTitleText": "我的",
+     //        	"navigationBarBackgroundColor": "#ffd655"
+     //        }
+     //    }
+        // ,{
+        //     "path" : "pages/registLogin/registLogin",
+        //     "style" : {}
+        // }
         ,{
-            "path" : "pages/registLogin/registLogin",
+            "path" : "pages/about/about",
             "style" : {}
         }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "Cardtalk",
+		"navigationBarTitleText": "图言图语",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"tabBar": {
-		"color":"#bfbfbf",
-		"selectedColor":"#515151",
-		"borderStyle":"black",
-		"backgroundColor":"#ffffff",
-		"list": [
-			{
-				"pagePath":"pages/index/index",
-				"text": "Cardtalk",
-				"iconPath":"static/tabBarIcon/home.png",
-				"selectedIconPath":"static/tabBarIcon/home_selected.png"
-			},
-			{
-				"pagePath":"pages/user/user",
-				"text": "我的",
-				"iconPath":"static/tabBarIcon/account.png",
-				"selectedIconPath":"static/tabBarIcon/account_selected.png"
-			}
-		]
-	},
+	// "tabBar": {
+		// "color":"#bfbfbf",
+		// "selectedColor":"#515151",
+		// "borderStyle":"black",
+		// "backgroundColor":"#ffffff"
+		// "list": [
+		// 	{
+		// 		"pagePath":"pages/index/index",
+		// 		"text": "图言图语",
+		// 		"iconPath":"static/tabBarIcon/home.png",
+		// 		"selectedIconPath":"static/tabBarIcon/home_selected.png"
+		// 	},
+		// 	{
+		// 		"pagePath":"pages/about/about",
+		// 		// "pagePath":"pages/user/user",
+		// 		"text": "关于我们",
+		// 		"iconPath":"static/tabBarIcon/account.png",
+		// 		"selectedIconPath":"static/tabBarIcon/account_selected.png"
+		// 	}
+		// ]
+	// },
 	"condition" : { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式(list 的索引项)
 		"list": [

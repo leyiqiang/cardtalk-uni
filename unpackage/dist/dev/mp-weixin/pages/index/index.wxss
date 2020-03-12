@@ -28,7 +28,7 @@
 }
 ._ul.selected-cards {
 		display: block;
-		height:150px;
+		height:120px;
 		border-radius: 8px;
 		padding-top: 5px;
 		/* border: 1px solid green; */
@@ -36,11 +36,13 @@
 ._div.card-slot {
 		/* border: 1px solid red; */
 		border-radius: 8px;
-		height: 115px;
+		height: 120px;
+		/* padding-top:5%; */
 }
 button.playbutton {
 		width:90%;
 		background-color: #4bc73e;
+		margin-top: 10px;
 }
 ._ul.categories {
 		overflow-x: auto;
@@ -57,14 +59,15 @@ button.playbutton {
 		top:0;
 		display: block;
 		width:100%;
-		margin: 5px;
+		margin: 0;
 		padding: 0;
 		border-radius: 8px;
 		/* border: 1px solid red; */
 }
 .choose-card-block {
+		width:100%;
 		position: absolute;
-		top:260px;
+		top:230px;
 		bottom: 0px;
 		overflow-x: hidden;
 		overflow-y: scroll;
