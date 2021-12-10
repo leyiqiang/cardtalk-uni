@@ -92,7 +92,6 @@
 			showSelectedItems() {
 				if(this.selectedCategory === HISTORY) {
 					let historyCards = uni.getStorageSync(HISTORY);
-					console.log(historyCards)
 					return historyCards;
 				}
 				else {

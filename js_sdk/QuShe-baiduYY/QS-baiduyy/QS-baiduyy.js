@@ -149,7 +149,6 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
 	audio.onPlay(() => {
 		console.log('音频播放开始');
 		if (audioCallback && audioCallback.onPlay && typeof(audioCallback.onPlay) == 'function') {
-			console.log('1')
 			audioCallback.onPlay();
 		}
 	})

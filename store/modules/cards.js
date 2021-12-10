@@ -18,7 +18,7 @@ const HISTORY = '最近使用'
 const state = {
   selectedCategory: WANT,
   selectedCards: [],
-  categories: [HISTORY, WANT, TOOL, FOOD, PEOPLE, ANIMAL, BODY, CLOTH, TRAFFIC, LOCATION, TIME, MOOD, MOTION, CONTRACT],
+  categories: [HISTORY, WANT, TOOL, FOOD, PEOPLE, ANIMAL, BODY, CLOTH, TRAFFIC, LOCATION, TIME, MOOD, MOTION, CONTRACT, ASK],
   list: [
     { name: '我想要', category: WANT, pictureLink: "../../static/cardImages/iwant.jpg",},
     { name: '是的', category: WANT, pictureLink: "../../static/cardImages/yes.jpg",},
@@ -61,6 +61,7 @@ const state = {
 	{ name: '盘子', category: TOOL, pictureLink: "../../static/cardImages/plate.jpg",},
 	{ name: '眼镜', category: TOOL, pictureLink: "../../static/cardImages/glasses.jpg",},
 	{ name: '玩偶', category: TOOL, pictureLink: "../../static/cardImages/teddybear.jpg",},
+	{ name: '钥匙', category: TOOL, pictureLink: "../../static/cardImages/key.jpg",},
 	
 	{ name: '水', category: FOOD, pictureLink: "../../static/cardImages/water.jpg",},
 	{ name: '牛奶', category: FOOD, pictureLink: "../../static/cardImages/milk.jpg",},
@@ -69,6 +70,9 @@ const state = {
 	{ name: '米饭', category: FOOD, pictureLink: "../../static/cardImages/rice.jpg",},
 	{ name: '面包', category: FOOD, pictureLink: "../../static/cardImages/bread.jpg",},
 	{ name: '零食', category: FOOD, pictureLink: "../../static/cardImages/snacks.jpg",},
+	{ name: '苹果', category: FOOD, pictureLink: "../../static/cardImages/apple.jpg",},
+	{ name: '橘子 ', category: FOOD, pictureLink: "../../static/cardImages/oranges.jpg",},
+	{ name: '葡萄', category: FOOD, pictureLink: "../../static/cardImages/grape.jpg",},
 	{ name: '香蕉', category: FOOD, pictureLink: "../../static/cardImages/bananas.jpg",},
 	{ name: '糖果', category: FOOD, pictureLink: "../../static/cardImages/candy.jpg",},
 	{ name: '冰淇淋', category: FOOD, pictureLink: "../../static/cardImages/icecream.jpg",},
@@ -85,6 +89,7 @@ const state = {
 	{ name: '披萨', category: FOOD, pictureLink: "../../static/cardImages/pizza.jpg",},
 	{ name: '意大利面', category: FOOD, pictureLink: "../../static/cardImages/spagehetti.jpg",},
 	{ name: '盒饭', category: FOOD, pictureLink: "../../static/cardImages/bento.jpg",},
+	{ name: '菜', category: FOOD, pictureLink: "../../static/cardImages/dishes.jpg",},
 	{ name: '水壶', category: FOOD, pictureLink: "../../static/cardImages/watterbottle.jpg",},
 	{ name: '奶茶', category: FOOD, pictureLink: "../../static/cardImages/milktea.jpg",},
 	{ name: '饮料', category: FOOD, pictureLink: "../../static/cardImages/beverage.jpg",},
@@ -174,6 +179,7 @@ const state = {
 	{ name: '动物园', category: LOCATION, pictureLink: "../../static/cardImages/zoo.jpg",},
 	{ name: '水族馆', category: LOCATION, pictureLink: "../../static/cardImages/aquarium.jpg",},
 	{ name: '人行横道', category: LOCATION, pictureLink: "../../static/cardImages/crosswalk.jpg",},
+	{ name: '在', category: LOCATION, pictureLink: "../../static/cardImages/at.jpg",},
 	
 	{ name: '早上', category: TIME, pictureLink: "../../static/cardImages/morning.jpg",},
 	{ name: '白天', category: TIME, pictureLink: "../../static/cardImages/daytime.jpg",},
@@ -222,7 +228,7 @@ const state = {
 	{ name: '举高高', category: MOTION, pictureLink: "../../static/cardImages/raise.jpg",},
 	{ name: '笑', category: MOTION, pictureLink: "../../static/cardImages/smile.jpg",},
 	{ name: '拉手', category: MOTION, pictureLink: "../../static/cardImages/shakehands.jpg",},
-	{ name: '停', category: MOTION, pictureLink: "../../static/cardImages/stop2.jpg",},
+	{ name: '停', category: MOTION, pictureLink: "../../static/cardImages/stop.jpg",},
 	{ name: '拥抱', category: MOTION, pictureLink: "../../static/cardImages/hug.jpg",},
 	
 	{ name: '大的', category: CONTRACT, pictureLink: "../../static/cardImages/large.jpg",},
@@ -237,6 +243,8 @@ const state = {
 	{ name: '轻', category: CONTRACT, pictureLink: "../../static/cardImages/light.jpg",},
 	{ name: '前', category: CONTRACT, pictureLink: "../../static/cardImages/ahead.jpg",},
 	{ name: '后', category: CONTRACT, pictureLink: "../../static/cardImages/behind.jpg",},
+	{ name: '左', category: CONTRACT, pictureLink: "../../static/cardImages/left.jpg",},
+	{ name: '右', category: CONTRACT, pictureLink: "../../static/cardImages/right.jpg",},
 	{ name: '上面', category: CONTRACT, pictureLink: "../../static/cardImages/over.jpg",},
 	{ name: '下面', category: CONTRACT, pictureLink: "../../static/cardImages/under.jpg",},
 	

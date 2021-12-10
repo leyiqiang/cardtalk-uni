@@ -8525,7 +8525,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "wuc-tab": "/components/wuc-tab/wuc-tab", "uni-grid": "/components/uni-grid/uni-grid", "uni-grid-item": "/components/uni-grid-item/uni-grid-item" }, "usingAutoImportComponents": { "wuc-tab": "/components/wuc-tab/wuc-tab" } }, "pages/user/user": { "navigationBarTextStyle": "white", "navigationBarTitleText": "我的", "navigationBarBackgroundColor": "#ffd655", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/registLogin/registLogin": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/about/about": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "图言图语", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": {}, "pages/about/about": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "图言图语", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -9667,7 +9667,7 @@ var HISTORY = '最近使用';
 var state = {
   selectedCategory: WANT,
   selectedCards: [],
-  categories: [HISTORY, WANT, TOOL, FOOD, PEOPLE, ANIMAL, BODY, CLOTH, TRAFFIC, LOCATION, TIME, MOOD, MOTION, CONTRACT],
+  categories: [HISTORY, WANT, TOOL, FOOD, PEOPLE, ANIMAL, BODY, CLOTH, TRAFFIC, LOCATION, TIME, MOOD, MOTION, CONTRACT, ASK],
   list: [
   { name: '我想要', category: WANT, pictureLink: "../../static/cardImages/iwant.jpg" },
   { name: '是的', category: WANT, pictureLink: "../../static/cardImages/yes.jpg" },
@@ -9710,6 +9710,7 @@ var state = {
   { name: '盘子', category: TOOL, pictureLink: "../../static/cardImages/plate.jpg" },
   { name: '眼镜', category: TOOL, pictureLink: "../../static/cardImages/glasses.jpg" },
   { name: '玩偶', category: TOOL, pictureLink: "../../static/cardImages/teddybear.jpg" },
+  { name: '钥匙', category: TOOL, pictureLink: "../../static/cardImages/key.jpg" },
 
   { name: '水', category: FOOD, pictureLink: "../../static/cardImages/water.jpg" },
   { name: '牛奶', category: FOOD, pictureLink: "../../static/cardImages/milk.jpg" },
@@ -9718,6 +9719,9 @@ var state = {
   { name: '米饭', category: FOOD, pictureLink: "../../static/cardImages/rice.jpg" },
   { name: '面包', category: FOOD, pictureLink: "../../static/cardImages/bread.jpg" },
   { name: '零食', category: FOOD, pictureLink: "../../static/cardImages/snacks.jpg" },
+  { name: '苹果', category: FOOD, pictureLink: "../../static/cardImages/apple.jpg" },
+  { name: '橘子 ', category: FOOD, pictureLink: "../../static/cardImages/oranges.jpg" },
+  { name: '葡萄', category: FOOD, pictureLink: "../../static/cardImages/grape.jpg" },
   { name: '香蕉', category: FOOD, pictureLink: "../../static/cardImages/bananas.jpg" },
   { name: '糖果', category: FOOD, pictureLink: "../../static/cardImages/candy.jpg" },
   { name: '冰淇淋', category: FOOD, pictureLink: "../../static/cardImages/icecream.jpg" },
@@ -9734,6 +9738,7 @@ var state = {
   { name: '披萨', category: FOOD, pictureLink: "../../static/cardImages/pizza.jpg" },
   { name: '意大利面', category: FOOD, pictureLink: "../../static/cardImages/spagehetti.jpg" },
   { name: '盒饭', category: FOOD, pictureLink: "../../static/cardImages/bento.jpg" },
+  { name: '菜', category: FOOD, pictureLink: "../../static/cardImages/dishes.jpg" },
   { name: '水壶', category: FOOD, pictureLink: "../../static/cardImages/watterbottle.jpg" },
   { name: '奶茶', category: FOOD, pictureLink: "../../static/cardImages/milktea.jpg" },
   { name: '饮料', category: FOOD, pictureLink: "../../static/cardImages/beverage.jpg" },
@@ -9823,6 +9828,7 @@ var state = {
   { name: '动物园', category: LOCATION, pictureLink: "../../static/cardImages/zoo.jpg" },
   { name: '水族馆', category: LOCATION, pictureLink: "../../static/cardImages/aquarium.jpg" },
   { name: '人行横道', category: LOCATION, pictureLink: "../../static/cardImages/crosswalk.jpg" },
+  { name: '在', category: LOCATION, pictureLink: "../../static/cardImages/at.jpg" },
 
   { name: '早上', category: TIME, pictureLink: "../../static/cardImages/morning.jpg" },
   { name: '白天', category: TIME, pictureLink: "../../static/cardImages/daytime.jpg" },
@@ -9871,7 +9877,7 @@ var state = {
   { name: '举高高', category: MOTION, pictureLink: "../../static/cardImages/raise.jpg" },
   { name: '笑', category: MOTION, pictureLink: "../../static/cardImages/smile.jpg" },
   { name: '拉手', category: MOTION, pictureLink: "../../static/cardImages/shakehands.jpg" },
-  { name: '停', category: MOTION, pictureLink: "../../static/cardImages/stop2.jpg" },
+  { name: '停', category: MOTION, pictureLink: "../../static/cardImages/stop.jpg" },
   { name: '拥抱', category: MOTION, pictureLink: "../../static/cardImages/hug.jpg" },
 
   { name: '大的', category: CONTRACT, pictureLink: "../../static/cardImages/large.jpg" },
@@ -9886,6 +9892,8 @@ var state = {
   { name: '轻', category: CONTRACT, pictureLink: "../../static/cardImages/light.jpg" },
   { name: '前', category: CONTRACT, pictureLink: "../../static/cardImages/ahead.jpg" },
   { name: '后', category: CONTRACT, pictureLink: "../../static/cardImages/behind.jpg" },
+  { name: '左', category: CONTRACT, pictureLink: "../../static/cardImages/left.jpg" },
+  { name: '右', category: CONTRACT, pictureLink: "../../static/cardImages/right.jpg" },
   { name: '上面', category: CONTRACT, pictureLink: "../../static/cardImages/over.jpg" },
   { name: '下面', category: CONTRACT, pictureLink: "../../static/cardImages/under.jpg" },
 
@@ -10142,7 +10150,6 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
   audio.onPlay(function () {
     console.log('音频播放开始');
     if (audioCallback && audioCallback.onPlay && typeof audioCallback.onPlay == 'function') {
-      console.log('1');
       audioCallback.onPlay();
     }
   });
@@ -10195,38 +10202,6 @@ function btts(param, options, audioCallback, lineUp, returnAudio) {
   audio.play();
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */
-/*!***********************************************************!*\
-  !*** /Users/leyiqiang/work/cardtalk-uni/constants/api.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var API = '/' + 'api';
-var WX_USER = API + '/' + 'wxUser';
-var WX_LOGIN = WX_USER + '/' + 'login';var _default =
-
-{
-  WX_LOGIN: WX_LOGIN };exports.default = _default;
 
 /***/ })
 ]]);
